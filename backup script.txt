@@ -1,0 +1,95 @@
+HTML
+<!-- <div class="images-slideshow1">
+			<div id="slide1">
+				<input type="radio" id="slide1" name="slide1" checked="checked" />
+				<input type="radio" id="slide2" name="slide2" checked="checked" />
+				<input type="radio" id="slide3" name="slide3" checked="checked" />
+				<div class="content-slider">
+					<h2 class="title">Travels</h2>
+					<h3>LET'S JOIN US</h3>
+					<h3><br/>take your dreams</h3>
+					<img src="Images/Travel_03.gif" alt="slider header 1">
+				</div>
+			</div>
+		</div>
+		<div class="images-slideshow2">
+			<div id="slide2">
+				<div class="content-slider">
+					<h2 class="title">Travels</h2>
+					<h3>LET'S JOIN US</h3>
+					<h3><br/>take your dreams</h3>
+					<img src="Images/Travel_04.gif" alt="slider header 2">
+				</div>
+			</div>
+		</div>
+		<div class="images-slideshow3">
+			<div id="slide3">
+				<div class="content-slider">
+					<h2 class="title">Travels</h2>
+					<h3>LET'S JOIN US</h3>
+					<h3><br/>take your dreams</h3>
+					<img src="Images/Travel_05.gif" alt="slider header 3">
+				</div>
+			</div>
+		</div> -->
+CSS
+.slider {
+	/*margin-top: 49px;
+	margin-bottom: 637px;*/
+	width: 100%;
+	height: 100%;
+}
+.title {
+	padding-top: 20px;
+	text-align: center;
+	position: absolute;
+}
+.slide1,.slide2,.slide3 {
+	position: absolute;
+}
+.slide1:checked + images-slideshow1{
+	opacity: 1%;
+}
+.slide2:checked + images-slideshow2{
+	opacity: 1%;
+}
+.slide3:checked + images-slideshow3{
+	opacity: 1%;
+}
+.content-slider {
+	width: 300%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.content-slider>h3 {
+	color: #fbfafa;
+	float: left;
+	margin: 145px 20px 0px 360px;
+	position: absolute;
+	line-height: 1.5em;
+}
+.
+.content-slider>img {
+	width: 25%;
+	float: left;
+}
+/*.images-slideshow1 {
+	background: url(../Images/Travel_03.gif) no-repeat 0px 0px;
+	width: 1237px;
+	height: 587px;
+	margin-bottom: -18px;
+}
+.images-slideshow2 {
+	background-image: url(../Images/Travel_04.gif);
+	width: 1237px;
+	height: 650px;
+}
+*/

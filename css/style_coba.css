@@ -1,0 +1,114 @@
+body{
+	font-size: 90%;    
+	/*letter-spacing: 0.15em; */
+	margin: 0px;
+	background: #ffffff;
+	color: #333333;
+	font-family: 'Roboto';
+}
+/*home-page*/
+.background-header {
+	background-color: #252525;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	top: 0px;
+}
+header {
+	width: 960px; 
+	padding: 5px;
+	margin: 0px auto;  
+	/*background-color: #fbfafa;*/
+}
+ul {
+	padding: 10px 20px;
+	margin: 0px;
+}
+.nav-header>ul>li {
+	display: inline-block;
+	margin-left: 17px;
+}
+ul>li>a {
+	text-decoration: none;
+	color: #fbfafa;
+}
+.nav-header>ul>li>a:hover {
+	text-decoration: underline;
+	text-decoration-color: #88dc1e;
+}
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+}
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+
+/*about-page*/
+.about {
+	background-image: url(../Images/Travel_07.gif);
+	width: 395px;
+	height: 594px;
+	margin: 56px 0px 20px 190px;
+}
+.content-about{
+	float: left;
+	width: 491px;
+	margin-left: 480px;
+}
+.content-about>h2 {
+	margin-top: 95px;
+	margin-bottom: 60px;
+	/*float: left;*/
+}
+hr {
+	border: 1px solid #85db18;
+	width: 45px;
+	margin: 0px;
+}
+.list-about {
+	/*margin-top: 30px;*/
+	line-height: 2.1em;
+	list-style-image: url("../Images/icon_list_10.gif");
+}
+.list-about-left{
+	float: left;
+	width :235px;
+}
+.list-about-right{
+	float: right;
+	width :235px;
+}
+#button-readmore {
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #85db18; 
+	padding: 7px 25px 7px 25px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+	text-decoration: none;
+}
+#button-readmore:hover{
+	color: #fbfafa; 
+	border: 0px;  
+	background-color: #252525; 
+	padding: 7px 25px 7px 25px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+}

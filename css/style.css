@@ -1,0 +1,648 @@
+/*@font-face { 
+	font-family: 'Roboto'; 
+	src: url('fonts/chunkfive.eot');
+} */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff');
+    font-weight: 100;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'Vineyard Magazines';
+    src: url('../fonts/Vineyard_Magazines.woff');
+    font-weight: 100;
+    font-style: normal;
+} 
+body{
+	font-size: 90%;    
+	/*letter-spacing: 0.15em; */
+	margin: 0px;
+	background: #ffffff;
+	color: #333333;
+	font-family: 'Roboto';
+}
+/*home-page*/
+.background-header {
+	background-color: #252525;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	top: 0px;
+}
+header {
+	width: 960px; 
+	padding: 5px;
+	margin: 0px auto;  
+	/*background-color: #fbfafa;*/
+}
+ul {
+	padding: 10px 20px;
+	margin: 0px;
+}
+.nav-header>ul>li {
+	display: inline-block;
+	margin-left: 17px;
+}
+ul>li>a {
+	text-decoration: none;
+	color: #fbfafa;
+}
+.nav-header>ul>li>a:hover {
+	text-decoration: underline;
+	text-decoration-color: #88dc1e;
+}
+/*untuk slider*/
+#slide-wrapper {
+	width: 1366px;
+	height: 716px;
+	margin: 50px auto;
+	position: relative;
+	margin-bottom: 0px;
+	background: rgba(0, 0, 0, 0.5);
+	overflow:hidden;
+}
+#s1 {
+	padding: 6px;
+	background: #000000;
+	position: absolute;
+	left: 50%;
+	bottom: 25px;
+	margin-left: -36px;
+	border-radius: 20px;
+	opacity: 0.3;
+	cursor: pointer;
+	z-index: 999;
+}
+#s2 {
+	padding: 6px;
+	background: #000000;
+	position: absolute;
+	left: 50%;
+	bottom: 25px;
+	margin-left: -12px;
+	border-radius: 20px;
+	opacity: 0.3;
+	cursor: pointer;
+	z-index: 999;
+}
+#s3 {
+	padding: 6px;
+	background: #000000;
+	position: absolute;
+	left: 50%;
+	bottom: 25px;
+	margin-left: 12px;
+	border-radius: 20px;
+	opacity: 0.3;
+	cursor: pointer;
+	z-index: 999;
+}
+#s1:hover, #s2:hover, #s3:hover{
+	opacity: .50;
+}
+.inner-wrapper{
+	width: 1366px;
+	height: 640px;
+	position:absolute;
+	top: 0;
+	left: 0;
+	margin-bottom: 0px;
+	overflow:hidden;
+}
+.control{
+	display: none;
+}
+#Slide1:checked ~ .overflow-wrapper{
+	margin-left: 0%;
+}
+#Slide2:checked ~ .overflow-wrapper{
+	margin-left: -100%;
+}
+#Slide3:checked ~ .overflow-wrapper{
+	margin-left: -200%;
+}
+#Slide1:checked + #s1 {
+	opacity: 1;
+}
+#Slide2:checked + #s2 {
+	opacity: 1;
+}
+#Slide3:checked + #s3 {
+	opacity: 1;
+}
+.overflow-wrapper{
+	width: 400%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-y: hidden;
+	z-index: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-trnsition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.slide img{
+	width: 25%;
+	float: left;
+}
+/*untuk form*/
+#form1 {
+	float: right;
+	background-color: #252525	;
+	opacity: 0.75;
+	width: 20%;
+	height: 100%;
+	margin: 95px 170px 0px 20px;
+	padding: 0px 20px;
+}
+#form1>.nav-form>ul>li{
+	display: inline-block;
+	margin: 0px;
+	padding: 10px 5px 10px 10px;
+	background-color: #000000;
+	/*opacity: 100;*/
+}
+label {
+	color: #fbfafa;
+}
+select {
+	width: 100%;
+	height: 100%;
+	font-size: 90%;
+	color: #252525;
+	background-color: #fbfafa;
+	border: 1px solid #333333;
+	padding: 3px 0px;
+	background-repeat: no-repeat;
+	display: block;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+	margin-bottom: 5px;
+}
+select:focus { 
+	background-color: #ffffff;  
+	border: 1px solid #333333;
+} 
+#date {
+	width: 100%;
+	height: 100%;
+	font-size: 90%;
+	color: #252525;
+	background-color: #fbfafa;
+	border: 1px solid #333333;
+	padding: 3px 0px;
+	background-repeat: no-repeat;
+	display: block;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+	/*background-image: url(../Images/);*/
+	margin-bottom: 5px;
+}
+date:focus { 
+	background-color: #ffffff;  
+	border: 1px solid #333333;
+} 
+.input-form>input[type="submit"] {
+	background-color: #85db18;
+	padding: 5px 12px;
+}
+/*about-page*/
+.about-home {
+	background-image: url(../Images/Travel_07.gif);
+	width: 395px;
+	height: 594px;
+	margin: 660px 0px 20px 190px;
+}
+.about {
+	background-image: url(../Images/Travel_07.gif);
+	width: 395px;
+	height: 594px;
+	margin: 56px 0px 8px 190px;
+}
+.content-about{
+	float: left;
+	width: 491px;
+	margin-left: 480px;
+}
+.content-about>h2 {
+	margin-top: 95px;
+	margin-bottom: 40px;
+	font-family: 'Vineyard Magazines';
+	font-size: 45px;
+	/*float: left;*/
+}
+hr {
+	border: 1px solid #85db18;
+	width: 45px;
+	margin: 0px;
+}
+.list-about {
+	/*margin-top: 30px;*/
+	line-height: 2.1em;
+	list-style-image: url("../Images/icon_list_10.gif");
+}
+.list-about-left{
+	float: left;
+	width :235px;
+}
+.list-about-right{
+	float: right;
+	width :235px;
+}
+#button-readmore {
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #85db18; 
+	padding: 7px 25px 7px 25px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+	text-decoration: none;
+}
+#button-readmore:hover{
+	color: #fbfafa; 
+	border: 0px;  
+	background-color: #252525; 
+	padding: 7px 25px 7px 25px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+}
+/*gallery-page*/
+.images-gallery img {
+	/*width: 644px;
+	height: 770px;*/
+	width: 45%;
+	height: 45%;
+	float: left;
+	margin: 0px;
+}
+.describes-image {
+	width: 434px;
+	height: 726px;
+	margin-left: 726px;
+}
+.describes-image>h2 {
+	padding-top: 134px;
+	padding-bottom: 35px;
+	font-family: 'Vineyard Magazines';
+	font-size: 45px;
+}
+.all-images {
+	margin: 55px 39px 0px 0px;
+}
+.all-images>.img-gallery>img {
+	width: 175px;
+	height: 111px;
+	float: left;
+}
+#button-view-gallery{
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #252525; 
+	padding: 15px 0px 15px 0px;
+	-moz-box-shadow: inset 0 0 10px #ffffff;   
+	-webkit-box-shadow: inset 0 0 10px #ffffff;  
+	box-shadow: inset 0 0 10px #ffffff;
+	cursor: pointer;
+	width: 118px;
+	height: 24px;
+	position: absolute;
+	margin: 84px 115px 0px 115px;
+	text-decoration: none;
+	text-align: center;
+}
+#button-view-gallery:hover{
+	color: #252525; 
+	border: 0px;
+	background-color: #ffffff; 
+	padding: 15px 0px 15px 0px;
+	-moz-box-shadow: inset 0 0 10px #252525;   
+	-webkit-box-shadow: inset 0 0 10px #252525;  
+	box-shadow: inset 0 0 10px #252525;
+	cursor: pointer;
+	width: 118px;
+	height: 24px;
+	position: absolute;
+	margin: 84px 115px 0px 115px;
+	text-decoration: none;
+	text-align: center;
+}
+/*tours-page*/
+.tours {
+	margin: 0px;
+	background-image: url(../Images/Travel_12.gif);
+	width: 1029px;
+	height: 579px;
+	padding: 95px 160px;
+	text-align: center;
+	color: #fbfafa;
+}
+.tours>h2 {
+	font-family: 'Vineyard Magazines';
+	font-size: 45px;
+}
+.tours>p {
+	padding: 30px 275px;
+}
+.describes-tours {
+	background-color: #fbfafa;
+	width: 262px;
+	padding-bottom: 33px;
+	color: #252525;
+	margin: 5px 30px 5px 30px;
+	float: left;
+	box-shadow: -1px 1px 5px 0px #000000;
+}
+.describes-tours img {
+	width: 262px;
+	height: 169px;
+	margin: -5px;
+}
+.contemt {
+	margin-top: 0px;
+}
+.content>h4 {
+	background-color: #252525;
+	color: #fbfafa;
+	margin: 0px;
+	padding: 13px 0px;
+}
+.content-tours>p {
+	padding: 0px 10px;
+}
+.tours>input[type="image"] {
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin: 180px 0px;
+}
+sup,span {
+	color: #85db18;
+}
+span{
+	font-size: 140%;
+}
+#button-booknow{
+	margin-top: 10px;
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #252525; 
+	padding: 5px 27px 5px 27px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+	cursor: pointer;
+}
+#button-booknow:hover{
+	margin-top: 10px;
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #85db18; 
+	padding: 5px 27px 5px 27px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+}
+/*blogs-page*/
+.blogs {
+	margin: 30px 0px;
+}
+.blogs>img {
+	width: 50%;
+	height: 50%;
+	float: left;
+	margin-right: 55px;
+}
+.blogs>.describes-blogs>h2{
+	font-family: 'Vineyard Magazines';
+	font-size: 45px;
+}
+figure {
+	display: block;    
+	width: 376px;    
+	background-color: #fbfafa;      
+	text-align: left;
+	padding-right: 15px;
+	margin-left: 730px;
+	-moz-box-shadow: -1px 1px 2px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 2px 0px #000000;  
+	box-shadow: -1px 1px 2px 0px #000000;
+}	
+.list-blogs-active {    
+	display: block;    
+	width: 376px;    
+	background-color: #fbfafa;      
+	text-align: left;
+	padding-right: 15px;
+	margin-left: 730px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+}   
+figure>img{	
+	float: left;
+	margin: 10px 15px 0px 10px;
+	width: 151px;
+	height: 88px;
+	border: 0px;
+    -moz-box-shadow: -1px 1px 3px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 3px 0px #000000;  
+	box-shadow: -1px 1px 3px 0px #000000;
+}
+h4 {
+	color: #85db18;
+	margin: 0px;
+	padding-top: 10px;
+}
+figcaption>input[type="submit"]{
+	margin-left: 323px;
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #252525; 
+	padding: 2px 17px 2px 17px;
+	-moz-box-shadow: -1px 1px 3px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 3px 0px #000000;  
+	box-shadow: -1px 1px 3px 0px #000000;
+	cursor: pointer;
+}
+figcaption>input[type="submit"]:hover{
+	margin-left: 323px;
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #85db18; 
+	padding: 2px 17px 2px 17px;
+	-moz-box-shadow: -1px 1px 3px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 3px 0px #000000;  
+	box-shadow: -1px 1px 3px 0px #000000;
+}
+.describes-blogs>input[type="submit"]{
+	margin-top: 6px;
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #85db18; 
+	padding: 6px 17px 6px 17px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+	cursor: pointer;
+}
+.describes-blogs>input[type="submit"]:hover{
+	margin-top: 6px;
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #252525; 
+	padding: 6px 17px 6px 17px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+}
+/*contact-page*/
+.contact{
+	background-image: url(../Images/Travel_20.png);
+	border: 0px;
+	width: 1289px;
+	height: 728px;
+	margin: 0px;
+	padding: 70px 60px 70px 0px;
+}
+.contact>h2 {
+	text-align: center;
+	font-family: 'Vineyard Magazines';
+	font-size: 45px;
+}
+.contact>p {
+	margin-top: 5px;	
+	text-align: center;
+}
+#form2 {
+	margin: 5px 450px;
+}
+#form2>input[type="text"] {  
+	color: #252525;  
+	width: 405px;
+	background-color: #ffffff;  
+	border: 1px solid #fbfafa;  
+	border-radius: 0px;  
+	padding: 5px;
+	background-repeat: no-repeat;  
+	/*background-position: 8px 9px;  */
+	display: block; 
+	margin-top: 12px; 
+	margin-bottom: 10px;
+	opacity: 0.75;
+	-moz-box-shadow: -1px 1px 3px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 3px 0px #000000;  
+	box-shadow: -1px 1px 3px 0px #000000;
+} 
+#form2>input[type="text"]:focus { 
+	background-color: #ffffff;  
+	border: 1px solid #333333;
+} 
+#form2>textarea{
+	display: block;
+	width: 405px;
+	height: 150px;
+	padding: 5px 5px 5px 5px; 
+	background-color: #ffffff;  
+	border: 1px solid #fbfafa;
+	border-radius: 0px; 
+	background-repeat: no-repeat; 
+	margin-top: 12px; 
+	margin-bottom: 10px;
+	opacity: 0.75;
+	-moz-box-shadow: -1px 1px 3px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 3px 0px #000000;  
+	box-shadow: -1px 1px 3px 0px #000000;
+}
+#form2>input[type="submit"] {
+	margin: 5px 135px 30px 135px;
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #85db18; 
+	padding: 6px 17px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+	cursor: pointer;
+}
+#form2>input[type="submit"]:hover {
+	margin: 5px 135px 30px 135px;
+	color: #fbfafa; 
+	border: 0px;
+	background-color: #252525; 
+	padding: 6px 17px;
+	-moz-box-shadow: -1px 1px 5px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 5px 0px #000000;  
+	box-shadow: -1px 1px 5px 0px #000000;
+}
+#form2>input[placeholder],textarea[placeholder] {
+	color: #333333;
+	font-size: 90%;
+}
+.describes-footer {
+	margin: 20px 133px 10px 133px;
+	padding: 0px;
+	background-color: #333333;
+	width: 940px; 
+}
+.describes{
+	color: #fbfafa;
+	line-height: 2.15;
+	width: 200px;
+	float: left;
+}
+.describes>h2 {
+	font-family: 'Vineyard Magazines';
+	font-size: 45px;
+}
+.icon-socialmedia>img{
+	display: inline;
+	margin: 5px 5px 5px 0px;
+}
+.street{
+	list-style-image: url("../Images/icon-maps.png");
+}
+.telephone {
+	list-style-image: url("../Images/icon-telephone.png");
+}
+.email {
+	list-style-image: url("../Images/icon-email.png");
+	margin: 1px 3px;
+}
+.describes>ul {
+	list-style-image:  url("../Images/icon_list_2.png");
+	padding: 0px 20px;
+}
+.describes.destination {
+	width: 278px;
+	float: left;
+	/*background-color: #85db18;*/
+}
+.describes.address {
+	width: 255px;
+	margin-left: 3px;
+}
+.describes.destination>a>img{
+	width: 135px;
+	height: 91px;
+	padding: 0px;
+	border: 0px;
+	-moz-box-shadow: -1px 1px 3px 0px #000000;   
+	-webkit-box-shadow: -1px 1px 3px 0px #000000;  
+	box-shadow: -1px 1px 3px 0px #000000;
+	margin-bottom: -5px;
+}
+footer{
+	background-color: #252525;
+	margin: 0px;
+	padding: 1px 0px;
+	text-align: center;
+	color: #fbfafa;
+}
